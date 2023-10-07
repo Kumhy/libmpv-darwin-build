@@ -249,7 +249,6 @@ video_default_options = [
     '--enable-demuxer=subviewer',
     '--enable-demuxer=subviewer1',
     '--enable-demuxer=vplayer',
-    '--disable-demuxer=image*',
 
     # hwaccels
     '--enable-hwaccel=h263_videotoolbox',
@@ -352,6 +351,7 @@ p = mod.add_project('configure',
         '--extra-cxxflags=@0@'.format(' '.join(cpp_args)),
         '--extra-objcflags=@0@'.format(' '.join(objc_args)),
         '--extra-ldflags=@0@'.format(' '.join(c_link_args)),
+        '--disable-demuxer=image*',
     ],
     verbose: true,
 )
